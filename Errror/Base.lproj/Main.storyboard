@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g80-tR-ukj">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="0bz-BD-mxi">
+            <objects>
+                <tableViewController id="g80-tR-ukj" customClass="ViewController" customModule="Errror" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="128" estimatedRowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" id="6DV-as-N5d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" id="TW1-fz-J3z" customClass="TableCell" customModule="Errror" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TW1-fz-J3z" id="h1k-kv-wEA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="127.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iab-ZR-YcR">
+                                            <rect key="frame" x="20" y="11" width="374" height="106"/>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ayO-T3-6FF">
+                                            <rect key="frame" x="64" y="53" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="color" red="0.46061849589999998" green="0.83514624829999995" blue="0.98749428989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </activityIndicatorView>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q1O-u9-Wwk">
+                                            <rect key="frame" x="132" y="62" width="150" height="2"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </progressView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-yJ-ZML">
+                                            <rect key="frame" x="310" y="48" width="69" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Download"/>
+                                            <connections>
+                                                <action selector="startStopButton:" destination="TW1-fz-J3z" eventType="touchUpInside" id="dfp-WP-Y5N"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iab-ZR-YcR" firstAttribute="trailing" secondItem="h1k-kv-wEA" secondAttribute="trailingMargin" id="9nm-bs-wbc"/>
+                                        <constraint firstItem="iab-ZR-YcR" firstAttribute="leading" secondItem="h1k-kv-wEA" secondAttribute="leadingMargin" id="VRm-Zq-2Ul"/>
+                                        <constraint firstItem="iab-ZR-YcR" firstAttribute="bottom" secondItem="h1k-kv-wEA" secondAttribute="bottomMargin" id="fzK-gC-9b8"/>
+                                        <constraint firstItem="iab-ZR-YcR" firstAttribute="top" secondItem="h1k-kv-wEA" secondAttribute="topMargin" id="oTd-vG-NBv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="ayO-T3-6FF" id="m10-pc-OIl"/>
+                                    <outlet property="photoView" destination="iab-ZR-YcR" id="vCw-r6-w1y"/>
+                                    <outlet property="progressDownload" destination="q1O-u9-Wwk" id="3MD-kC-CjX"/>
+                                    <outlet property="startStopButton" destination="Hv4-yJ-ZML" id="HCD-Gw-Xjw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g80-tR-ukj" id="Nos-cF-soU"/>
+                            <outlet property="delegate" destination="g80-tR-ukj" id="Wn2-7F-fcR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNG-bw-TRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101" y="131"/>
+        </scene>
+    </scenes>
+</document>
